@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+		<groupId>spru.git</groupId>
+        <artifactId>unreleased-artifact-2</artifactId>
+        <version>1.0</version> 
+		<relativePath>../project-parent</relativePath>
+	</parent>
+    <artifactId>unreleased-artifact-2.component1</artifactId>
+    <description>Test Consumer Application</description>
+
+    <properties>
+        <compiler-plugin.version>3.12.1</compiler-plugin.version>
+    </properties>
+
+    <repositories>
+		<repository>
+			<id>confluent</id>
+			<url>http://packages.confluent.io/maven/</url>
+		</repository>
+	</repositories>
+
+    <dependencies>
+        <dependency>
+			<groupId>org.apache.avro</groupId>
+			<artifactId>avro</artifactId>
+		</dependency>
+        <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+    </dependencies>
+
+    <build>
+		<plugins>
+            <plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${compiler-plugin.version}</version>
+				<configuration>
+					<compilerArgs>
+						<arg>-parameters</arg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
+        </plugins>
+    </build>
+</project>
