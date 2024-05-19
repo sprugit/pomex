@@ -14,7 +14,7 @@ func main() {
 	estimate := flag.Uint("estimate", 10, "Rough estimate of how many pom files will be found.")
 	directory := flag.String("target-dir", "", "Target directory to srape for maven projects.")
 
-	fmt.Println(&filename)
+	fmt.Println(*filename)
 
 	poms, err := utils.FetchPOMs(*directory, *estimate)
 	if err != nil {

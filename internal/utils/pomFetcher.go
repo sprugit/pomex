@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 )
 
+// Note : must be in caps to be exported
 func FetchPOMs(work_dir string, estimate uint) ([]string, error) {
 
 	if work_dir == "" {

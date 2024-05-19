@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-go run 
+go run cmd/pomex/main.go
